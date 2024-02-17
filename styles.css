@@ -12,6 +12,15 @@ body {
     margin: 0 auto;
 }    
 
+input[placeholder] {
+    color: #666; 
+}
+
+
+input:focus {
+    color: #000; 
+}
+
 .card-header {
     background: #1488cc;
     background: -webkit-linear-gradient(to right, #283282, 1488cc);
