@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; 
+    padding-top: 20px;
+}
+
+.mx-auto {
+    width: 40rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.card-header {
+    background: #1488cc;
+    background: -webkit-linear-gradient(to right, #283282, 1488cc);
+    background: linear-gradient(to right, #283282, 1488cc);
+    color: #283282;
+    text-align: center;
+    padding: 20px 0; 
+    margin-bottom: 20px;  
+}
+
+.card-header p {
+    font-size: 30px;
+    font-family:'Roboto', sans-serif;                
+    color: #04119b;
+    margin: 0; 
+}
+
+.card-header img {
+    width: 70%;
+    display: block;
+    margin: 0 auto; 
+}
+
+h2 {
+    color: #04119b;
+    margin-bottom: 20px; 
+}
+
+label {
+    margin-bottom: 5px; 
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+textarea {
+    min-height: 100px; 
+    resize: vertical; 
+}
+
+input[type="submit"] {
+    background-color: #1488cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0d6efd;
+}
+
+@media screen and (max-width: 600px) {
+    .mx-auto {
+        width: 90%;
+    }
+    
+    .card-header p {
+        font-size: 20px;
+    }
+    
+    input[type="submit"] {
+        padding: 8px 12px;
+    }
+}
