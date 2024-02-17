@@ -31,40 +31,53 @@
                 <div class="card shadow-lg p-3 mb-5 bg-white card-limited-width">
                     <h2>NGO Information</h2> 
                     <label for="company">NGO Name</label>
-                    <input id="company" maxlength="40" name="company" size="20" type="text" required><br>                    
+                    <input id="company" maxlength="40" name="company" size="20" type="text" required><br> 
+                    <span class="error-msg" id="company-error-msg">Este campo es requerido.</span><br>                   
                     <label for="country">Country</label>
-                    <input id="country" maxlength="40" name="country" size="20" type="text" required><br>                    
+                    <input id="country" maxlength="40" name="country" size="20" type="text" required><br>
+                    <span class="error-msg" id="country-error-msg">Este campo es requerido.</span><br>                    
                     <label for="street">Street</label>
-                    <textarea name="street" required></textarea><br>                    
+                    <textarea name="street" required></textarea><br>
+                    <span class="error-msg" id="street-error-msg">Este campo es requerido.</span><br>                    
                     <label for="city">City</label>
-                    <input id="city" maxlength="40" name="city" size="20" type="text" required><br>                    
+                    <input id="city" maxlength="40" name="city" size="20" type="text" required><br>
+                    <span class="error-msg" id="city-error-msg">Este campo es requerido.</span><br>                    
                     <label for="state">State/Province</label>
-                    <input id="state" maxlength="20" name="state" size="20" type="text" required><br>                    
+                    <input id="state" maxlength="20" name="state" size="20" type="text" required><br>
+                    <span class="error-msg" id="state-error-msg">Este campo es requerido.</span><br>                    
                     NIT:<input id="00Nan000001h1bN" name="00Nan000001h1bN" size="20" type="text" required><br>
+                    <span class="error-msg" id="nit-error-msg">Este campo es requerido.</span><br>
                     <label for="phone">Phone</label>
-                    <input id="phone" maxlength="40" name="phone" size="20" type="text" required><br>                    
+                    <input id="phone" maxlength="40" name="phone" size="20" type="text" required><br>
+                    <span class="error-msg" id="phone-error-msg">Este campo es requerido.</span><br>                    
                     <label for="url">Website</label>
                     <input id="url" maxlength="80" name="url" size="20" type="text" required><br>
+                    <span class="error-msg" id="url-error-msg">Este campo es requerido.</span><br>
                 </div>
 
                 <div class="card shadow-lg p-3 mb-5 bg-white card-limited-width">
                     <h2>Contact Information</h2>
                     <label for="first_name">First Name</label>
                     <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required><br>
+                    <span class="error-msg" id="first-name-error-msg">Este campo es requerido.</span><br>
                     
                     <label for="last_name">Last Name</label>
                     <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required><br>
+                    <span class="error-msg" id="last-name-error-msg">Este campo es requerido.</span><br>
                     
                     <label for="mobile">Mobile</label>
                     <input id="mobile" maxlength="40" name="mobile" size="20" type="text" required><br>
+                    <span class="error-msg" id="mobile-error-msg">Este campo es requerido.</span><br>
                     
                     <label for="email">Email</label>
                     <input id="email" maxlength="80" name="email" size="20" type="text" required><br>
+                    <span class="error-msg" id="email-error-msg">Este campo es requerido.</span><br>
                 </div>
 
                 <div class="card shadow-lg p-3 mb-5 bg-white card-limited-width">
                     <h2>Project Information</h2>
                     Project Title:<input id="00Nan000001gXAH" maxlength="255" name="00Nan000001gXAH" size="20" type="text" required><br>
+                    <span class="error-msg" id="project-title-error-msg">Este campo es requerido.</span><br>
                     
                     Type of Project:
                     <select id="00Nan000001hKkT" name="00Nan000001hKkT" title="Type of Project" required>
@@ -79,18 +92,46 @@
                         <option value="Sexual and Reproductive Health Projects">Sexual and Reproductive Health Projects</option>
                         <option value="Water and Sanitation Projects">Water and Sanitation Projects</option>
                         </select><br>
+                        <span class="error-msg" id="type-of-project-error-msg">Este campo es requerido.</span><br>
                     
                     Amount requested for subsidy:
                     <input id="00Nan000001gWrK" name="00Nan000001gWrK" size="20" type="text" required><br>
+                    <span class="error-msg" id="amount-requested-error-msg">Este campo es requerido.</span><br>
                     
                     <label for="description">Description</label>
                     <textarea name="description" required></textarea><br>
+                    <span class="error-msg" id="description-error-msg">Este campo es requerido.</span><br>
                     
-                    <input type="submit" name="submit">
+                    <input id="submit-btn" type="submit" name="submit">
                 </div>
             </div>
         </form>
     </div>                  
+    <script>
+        
+        document.getElementById('submit-btn').addEventListener('click', function(event) {
+          
+            event.preventDefault();
+    
+        
+            var companyField = document.getElementById('company');
+            var companyErrorMsg = document.getElementById('company-error-msg');
+    
+            if (companyField.value == '') {
+                companyErrorMsg.style.display = 'block';
+            } else {
+                companyErrorMsg.style.display = 'none';
+            }
+    
+       
+            var allValid = companyField.value != '';
+    
+         
+            if (allValid) {
+                document.forms[0].submit();
+            }
+        });
+    </script>
     
     <footer class="blockquote-footer text-center">
         <address>
