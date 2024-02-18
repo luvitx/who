@@ -12,14 +12,7 @@ body {
     margin: 0 auto;
 }    
 
-input[placeholder] {
-    color: #666; 
-}
 
-
-input:focus {
-    color: #000; 
-}
 
 .card-header {
     background: #1488cc;
@@ -54,6 +47,7 @@ label {
 }
 
 input[type="text"],
+input[type="email"],
 textarea,
 select {
     width: 100%;
